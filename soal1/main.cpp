@@ -9,12 +9,11 @@ int main() {
     
     createList(L);
     
-    insertLast(L, alokasi("Pensil", "001", 50, 2000.0, 0.0)); 
+    address nodePulpen = alokasi("Pulpen", "A001", 20, 2500.0, 0.0);
+    address nodePulpen = alokasi("Buku tulis", "A002", 15, 5000.0, 10.0); 
+    address nodePulpen = alokasi("Penghapus", "A003", 30, 1500.0, 0.0);
     
-    address nodePulpen = alokasi("Pulpen Gel", "P002", 30, 5000.0, 10.0);
     insertFirst(L, nodePulpen);
-
-    insertLast(L, alokasi("Stabilo Kuning", "S003", 10, 15000.0, 0.0));
 
     address nodeBuku = alokasi("Buku Tulis", "B004", 40, 10000.0, 5.0);
     insertAfter(L, nodePulpen, nodeBuku); 
@@ -27,7 +26,6 @@ int main() {
     cout << "delFirst: Menghapus " << dataProduct.Nama << " (SKU: " << dataProduct.SKU << ")" << endl;
 
     address nodePrev = L.head; 
-    // delAfter(L, nodePrev, dataProduct); 
     cout << "delAfter: Menghapus " << dataProduct.Nama << " (SKU: " << dataProduct.SKU << ")" << endl;
     
     delLast(L, dataProduct); 
